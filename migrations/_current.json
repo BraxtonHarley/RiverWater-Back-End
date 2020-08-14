@@ -1,0 +1,169 @@
+{
+    "tables": {
+        "inventory": {
+            "tableName": "inventory",
+            "schema": {
+                "id": {
+                    "allowNull": false,
+                    "primaryKey": true,
+                    "autoIncrement": true,
+                    "field": "id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "name": {
+                    "allowNull": false,
+                    "field": "name",
+                    "seqType": "Sequelize.STRING(45)"
+                },
+                "price1": {
+                    "allowNull": false,
+                    "field": "price1",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "price2": {
+                    "allowNull": false,
+                    "field": "price2",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "description1": {
+                    "allowNull": false,
+                    "field": "description1",
+                    "seqType": "Sequelize.STRING"
+                },
+                "description2": {
+                    "allowNull": false,
+                    "field": "description2",
+                    "seqType": "Sequelize.STRING"
+                },
+                "size1": {
+                    "allowNull": false,
+                    "field": "size1",
+                    "seqType": "Sequelize.STRING(10)"
+                },
+                "size2": {
+                    "allowNull": false,
+                    "field": "size2",
+                    "seqType": "Sequelize.STRING(10)"
+                },
+                "numbers": {
+                    "allowNull": false,
+                    "field": "numbers",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "inCart": {
+                    "allowNull": false,
+                    "field": "inCart",
+                    "seqType": "Sequelize.BOOLEAN"
+                },
+                "isMainProduct": {
+                    "allowNull": false,
+                    "field": "isMainProduct",
+                    "seqType": "Sequelize.BOOLEAN"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "image": {
+                    "allowNull": false,
+                    "field": "image",
+                    "seqType": "Sequelize.STRING"
+                }
+            },
+            "indexes": []
+        },
+        "posts": {
+            "tableName": "posts",
+            "schema": {
+                "PostId": {
+                    "allowNull": false,
+                    "autoIncrement": true,
+                    "primaryKey": true,
+                    "field": "PostId",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "PostBody": {
+                    "field": "PostBody",
+                    "seqType": "Sequelize.STRING"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        },
+        "users": {
+            "tableName": "users",
+            "schema": {
+                "UserId": {
+                    "autoIncrement": true,
+                    "primaryKey": true,
+                    "allowNull": false,
+                    "field": "UserId",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "FirstName": {
+                    "field": "FirstName",
+                    "seqType": "Sequelize.STRING"
+                },
+                "LastName": {
+                    "field": "LastName",
+                    "seqType": "Sequelize.STRING"
+                },
+                "Username": {
+                    "unique": true,
+                    "field": "Username",
+                    "seqType": "Sequelize.STRING"
+                },
+                "Password": {
+                    "field": "Password",
+                    "seqType": "Sequelize.STRING"
+                },
+                "Email": {
+                    "unique": true,
+                    "field": "Email",
+                    "seqType": "Sequelize.STRING"
+                },
+                "Admin": {
+                    "defaultValue": {
+                        "value": false
+                    },
+                    "field": "Admin",
+                    "seqType": "Sequelize.BOOLEAN"
+                },
+                "Deleted": {
+                    "defaultValue": {
+                        "value": false
+                    },
+                    "field": "Deleted",
+                    "seqType": "Sequelize.BOOLEAN"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        }
+    },
+    "revision": 1
+}
